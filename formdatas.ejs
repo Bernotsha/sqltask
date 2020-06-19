@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <title>Codingmart</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            body{
+                background-color: whitesmoke;
+            }
+            .middle{
+                width: 800px;
+                margin: 0 auto;
+                background-color: white;
+            }
+            .header{
+                background-color:#1b6ca8;
+                padding: 30px;
+                text-align: center;
+                font-size: 30px;
+                opacity: 0.7;
+                color: white;
+                letter-spacing: 2px;
+            }
+            .email{
+                text-align: center;
+                font-size: larger;
+                padding: 20px;
+            }
+            input[type=submit] {
+                color: white;
+                font-weight: bold;
+                background-color:#1b6ca8;
+                opacity: 0.9;
+                padding: 15px 25px;
+                font-size: 15px;
+                border: none;
+            }
+            input[type=submit]:hover{
+                opacity: 1;
+            }
+            input[type=text]{
+                padding: 10px;
+            
+            }
+            input[type=tel]{
+                padding: 10px;
+            }
+            input[type=email]{
+                padding: 10px;
+            }
+            .user{
+                text-align: center;
+                padding-top: 30px;
+                letter-spacing: 1px;
+                opacity: 0.8;
+            }
+            .copy{
+                background-color: #1b6ca8;
+                padding: 5px;
+                color: white;
+                text-align: center;
+            }
+            .hint{
+                background-color:#ffaaa5;
+                color: white;
+                opacity: 0.8;
+                text-align: center;
+                letter-spacing: 1px;
+                
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="middle">
+            <div class="header">CODINGMART</div>
+            <div class="hint">HINT:- The Form data will be inserted into a mysql database.</div>
+            <div class="user"> ENTER USER CREDENTIALS</div>
+                <form action="/home" method="POST">
+                    <div class="email">
+                    <input type="email" name="email" placeholder="E-MAIL" size="50" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                    </div>
+                    <div class="email">
+                    <input type="text" name="address"placeholder="ADDRESS" size="50" required>
+                    </div>
+                    <div class="email">
+                    <input type="text" name="name" placeholder="NAME" size="50" required>
+                    </div>
+                    <div class="email">
+                    <input type="tel" name="phone" placeholder="MOBILE" size="50" required pattern="[1-9]{1}[0-9]{9}">
+                    </div>
+                    <div class="email">
+                    <input type="submit">
+                    </div>
+                </form>
+                <div class="copy">&#169; codingmart.com</div>
+        </div>
+    </body>
+</html>
+

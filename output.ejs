@@ -1,0 +1,112 @@
+<html>
+<head>
+    <title>Codingmart</title>
+</head>
+<script>
+
+     function myfunction()
+     {
+         document.getElementById("show").style.display="block";
+     }   
+
+</script>
+<style>
+    #show{
+        display: none;
+    }
+    #table1{
+    margin-left: auto;
+    margin-right: auto;
+}
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.middle{
+    margin: 0 auto;
+    width: 960px;
+    background-color: white;
+}
+.header{
+    background-color:#1b6ca8;
+    padding: 30px;
+    text-align: center;
+    font-size: 30px;
+    opacity: 0.7;
+    color: white;
+    letter-spacing: 2px;
+}
+body{
+    background-color: whitesmoke;
+}
+.thanks{
+    text-align: center;
+    padding: 30px;
+    font-size: 30px;
+}
+.button1{
+    color: white;
+    font-weight: bold;
+    background-color:#1b6ca8;
+    opacity: 0.7;
+    padding: 15px 25px;
+    font-size: 15px;
+    border: none;
+    text-align: right;
+    
+}
+.button1:hover{
+    opacity: 1;
+}
+.click{
+    padding: 20px;
+}
+.copy{
+    margin-top: 20px;
+    background-color: #1b6ca8;
+    padding: 5px;
+    color: white;
+    text-align: center;
+    opacity: 0.7;
+}
+
+</style>
+<body>
+<div class="middle">
+    <div class="header">CODINGMART</div>
+    <div class="thanks">Thanks for uploading your data.</div>
+    <div class="click"><button class="button1" onclick="myfunction()">SHOW DATA</button><a href="/"><button style="margin-left: 630px;" class="button1">HOME PAGE</button></a></div>
+
+    <div id="show">
+    <table id="table1">
+        <tr>
+        <th>id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Mobile</th>
+        </tr>
+        <% for(var item in sqldata) { %>
+            <tr>
+            <td><%= sqldata[item].id %></td>
+            <td><%= sqldata[item].name %></td>
+            <td><%= sqldata[item].email %></td>
+            <td><%= sqldata[item].address %></td>
+            <td><%= sqldata[item].phone %></td>
+            </tr>
+            <% } %>
+
+    </table>
+    </div>
+    <div class="copy">&#169; codingmart.com</div>
+</div>
+
+</body>
+
+</html>
